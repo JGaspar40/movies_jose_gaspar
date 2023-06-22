@@ -62,7 +62,7 @@ const setActors = catchError(async(req, res) => {
     await movies.setActors(req.body)
 
     // 3. Leer los actors seteados
-    const actors = await movies.getGenres()
+    const actors = await movies.getActors()
 
     return res.json(actors)
 })
@@ -77,7 +77,7 @@ const setDirectors = catchError(async(req, res) => {
     await movies.setDirectors(req.body)
 
     // 3. Leer los directors seteados
-    const directors = await movies.getGenres()
+    const directors = await movies.getDirectors()
 
     return res.json(directors)
 })
